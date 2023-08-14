@@ -1,0 +1,6 @@
+@media (min-width: 1000px) {
+    #carouselExampleIndicators .carousel-inner img {
+        max-height: 600px;
+        width: auto;
+    }
+}
