@@ -15,7 +15,7 @@
   \**********************/
 /***/ (() => {
 
-eval("console.log(\"Hello world!\");\n\n//# sourceURL=webpack://frontend/./src/index.js?");
+eval("window.addEventListener(\"DOMContentLoaded\", () => {\r\n    \"use strict\";\r\n\r\n\r\n});\n\n//# sourceURL=webpack://frontend/./src/index.js?");
 
 /***/ })
 

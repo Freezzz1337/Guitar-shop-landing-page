@@ -8,11 +8,13 @@
           integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link href="./src/assets/css/icon.css" rel="stylesheet">
     <link href="./src/assets/css/carousel.css" rel="stylesheet">
+    <link href="./src/assets/css/font.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+
 <header>
-    <nav class="navbar navbar-expand-md navbar-light border-bottom">
+    <nav class="navbar navbar-expand-md navbar-light bg-light ">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img class="img-fluid" src="./src/assets/img/guitarIcon/guitarIcon.png">
@@ -46,12 +48,34 @@
 
 <!--Modal-->
 
-
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header ">
+                <h5 class="modal-title" id="exampleModalLabel">We'll get in touch with you as soon as possible!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="modalFormName" class="col-form-label">Your name:</label>
+                        <input type="text" class="form-control" id="modalFormName">
+                    </div>
+                    <div class="form-group">
+                        <label for="modalFormPhone" class="col-form-label">Your phone:</label>
+                        <input type="text" class="form-control" id="modalFormPhone">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <main>
-
-
-
 
     <!--Сarousel-->
     <div id="carouselExampleIndicators" class="carousel slide carousel-sm" data-ride="carousel">
@@ -63,7 +87,7 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100 " src="src/assets/img/guitarForСarousel/firstGuitarForСarouselr.jpg"
+                <img class="d-block w-100 " src="./src/assets/img/guitarForСarousel/firstGuitarForСarouselr.jpg"
                      alt="First slide">
                 <div class="carousel-caption d-none d-sm-block">
                     <h5>First slide label</h5>
@@ -71,7 +95,7 @@
                 </div>
             </div>
             <div class="carousel-item ">
-                <img class="d-block w-100" src="src/assets/img/guitarForСarousel/secondGuitarForСarousel.jpg"
+                <img class="d-block w-100" src="./src/assets/img/guitarForСarousel/secondGuitarForСarousel.jpg"
                      alt="Second slide">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Second slide label</h5>
@@ -79,7 +103,7 @@
                 </div>
             </div>
             <div class="carousel-item ">
-                <img class="d-block w-100" src="src/assets/img/guitarForСarousel/thirdGuitarForСarousel.jpg"
+                <img class="d-block w-100" src="./src/assets/img/guitarForСarousel/thirdGuitarForСarousel.jpg"
                      alt="Third slide">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Third slide label</h5>
@@ -95,6 +119,51 @@
         </a>
     </div>
 
+    <!--Popular models-->
+    <div class="container mt-4 fontForHeader">
+        <div class="text-center ">
+            <h1 >Popular models</h1>
+            <h2>IN OUR SHOP</h2>
+            <h3>In our store there are guitars for every taste</h3>
+        </div>
+
+        <div class="my-3 border-top"></div>
+
+        <div class="row text-center">
+            <div class="col-12 col-md-4 mt-2">
+                <img src="https://images.unsplash.com/photo-1605020420620-20c943cc4669?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGd1aXRhcnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80" class="card-img-top" alt="guitar"/>
+                <div class="card-body ">
+                    <h5 class="card-title ">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text">Price: 200$</p>
+                    <a href="#" class="btn btn-secondary">Order</a>
+                </div>
+            </div>
+            <div class="col-12 col-md-4  mt-2">
+                <img src="https://assets.yousician.com/app/uploads/2022/05/05130122/yousician-educational-photography-21-1024x683.jpg.webp" class="card-img-top" alt="guitar"/>
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text">Price: 200$</p>
+                    <a href="#" class="btn btn-secondary">Order</a>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mt-2">
+                <img src="https://images.unsplash.com/photo-1605020420620-20c943cc4669?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGd1aXRhcnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80 " class="card-img-top" alt="guitar"/>
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text">Price: 200$</p>
+                    <a href="#" class="btn btn-secondary">Order</a>
+                </div>
+            </div>
+            <div class="border-top my-4"></div>
+        </div>
+
+
+    </div>
+
+
 
 </main>
 
@@ -104,5 +173,6 @@
 </footer>
 
 <script src="./dist/bundle.js"></script>
+
 </body>
 </html>
