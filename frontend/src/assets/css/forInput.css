@@ -1,0 +1,12 @@
+.no-border input {
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #ced4da;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.no-border input:focus {
+    box-shadow: none;
+    background-color: transparent;
+}

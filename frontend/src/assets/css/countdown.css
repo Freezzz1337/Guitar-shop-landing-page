@@ -1,14 +1,12 @@
 .timer__block {
     width: 102px;
     height: 120px;
-    font-size: 16px;
-    font-weight: 300;
-}
+    }
 
 .promotion__timer .timer__block span {
     margin-top: 20px;
     margin-bottom: 5px;
     font-size: 56px;
-    font-weight: 700
 }
+
 
