@@ -13,15 +13,18 @@
     <link href="./src/assets/css/background.css" rel="stylesheet">
     <link href="./src/assets/css/forInput.css" rel="stylesheet">
     <link href="./src/assets/css/forPicture.css" rel="stylesheet">
+    <link href="./src/assets/css/forHeader.css" rel="stylesheet">
+    <link href="./src/assets/css/forProgress.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 
-<header>
+<header class="fixed-top  ">
+
     <nav class="navbar navbar-expand-md navbar-light bg-light ">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img class="img-fluid" src="./src/assets/img/guitarIcon/guitarIcon.png">
+                <img class="img-fluid" src="./src/assets/img/guitarIcon/guitarIcon.png" alt="img">
             </a>
 
 
@@ -48,7 +51,13 @@
             </div>
         </div>
     </nav>
+
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
 </header>
+
+
 
 <!--Modal-->
 
@@ -80,6 +89,9 @@
 </div>
 
 <main>
+
+
+
 
     <!--Сarousel-->
     <div id="carouselExampleIndicators" class="carousel slide carousel-sm" data-ride="carousel">
@@ -404,7 +416,9 @@
     <div class="container">
         <div class="row">
             <div class="col-12 order-last align-items-md-start col-md-6 mt-4 ">
-                <img class="w-100 " src="https://assets.yousician.com/app/uploads/2022/05/05130122/yousician-educational-photography-21-1024x683.jpg.webp" alt=""/>
+                <img class="w-100 "
+                     src="https://assets.yousician.com/app/uploads/2022/05/05130122/yousician-educational-photography-21-1024x683.jpg.webp"
+                     alt=""/>
 
             </div>
             <div class="col-12 align-items-start order-md-last col-md-6 mt-4 bgc_guitar">
@@ -418,7 +432,8 @@
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label h5">E-mail</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="write your e-mail" >
+                        <input type="email" class="form-control" id="email" name="email"
+                               placeholder="write your e-mail">
                     </div>
                     <button type="submit" class="btn btn-outline-secondary mx-auto d-block ">Write us!</button>
                 </form>
