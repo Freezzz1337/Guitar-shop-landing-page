@@ -16,7 +16,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_modules_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/modules/header */ \"./src/js/modules/header.js\");\n\r\n\r\nif (false) {}\r\n\r\nwindow.addEventListener(\"DOMContentLoaded\", () => {\r\n    \"use strict\";\r\n    (0,_js_modules_header__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n\r\n});\n\n//# sourceURL=webpack://frontend/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_modules_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/modules/header */ \"./src/js/modules/header.js\");\n/* harmony import */ var _js_modules_progressBar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/modules/progressBar */ \"./src/js/modules/progressBar.js\");\n\r\n\r\nwindow.addEventListener(\"DOMContentLoaded\", () => {\r\n    \"use strict\";\r\n\r\n    (0,_js_modules_header__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n    (0,_js_modules_progressBar__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n});\n\n//# sourceURL=webpack://frontend/./src/index.js?");
 
 /***/ }),
 
@@ -26,7 +26,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction header() {\r\n    const menuBtn = document.querySelector(\".navbar-toggler\");\r\n    const navbarContent = document.querySelector(\"#navbarContent\");\r\n\r\n    menuBtn.addEventListener(\"click\", (e) => {\r\n\r\n        if (navbarContent.classList.contains(\"show\")) {\r\n            navbarContent.classList.remove(\"show\");\r\n        } else {\r\n            navbarContent.classList.add(\"show\");\r\n        }\r\n    });\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (header);\n\n//# sourceURL=webpack://frontend/./src/js/modules/header.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction header() {\r\n    const menuBtn = document.querySelector(\".navbar-toggler\");\r\n    const navbarContent = document.querySelector(\"#navbarContent\");\r\n    const btnNavbar = document.querySelectorAll(\"[data-header-btn] a.nav-link\");\r\n    const headerHeight = document.querySelector(\"header\").offsetHeight;\r\n\r\n    menuBtn.addEventListener(\"click\", (e) => {\r\n\r\n        if (navbarContent.classList.contains(\"show\")) {\r\n            navbarContent.classList.remove(\"show\");\r\n        } else {\r\n            navbarContent.classList.add(\"show\");\r\n        }\r\n    });\r\n\r\n\r\n\r\n    btnNavbar.forEach(link => {\r\n        link.addEventListener('click', (event) => {\r\n            event.preventDefault();\r\n\r\n            const targetId = link.getAttribute('href');\r\n            const targetElement = document.querySelector(targetId);\r\n\r\n            if (targetElement) {\r\n                const targetOffset = targetElement.getBoundingClientRect().top;\r\n\r\n                window.scrollTo({\r\n                    top: window.pageYOffset + targetOffset - headerHeight,\r\n                    behavior: 'smooth'\r\n                });\r\n            }\r\n        });\r\n    });\r\n\r\n\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (header);\n\n//# sourceURL=webpack://frontend/./src/js/modules/header.js?");
+
+/***/ }),
+
+/***/ "./src/js/modules/progressBar.js":
+/*!***************************************!*\
+  !*** ./src/js/modules/progressBar.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction progressBar() {\r\n    const progressBar = document.querySelector(\".progress-bar\");\r\n    const body = document.body;\r\n    const html = document.documentElement;\r\n    let pageHeight = Math.max(body.scrollHeight, body.offsetHeight,\r\n        html.clientHeight, html.scrollHeight, html.offsetHeight);\r\n    let pageWidth = window.innerWidth;\r\n\r\n    function currentProgress() {\r\n        if (pageWidth === window.innerWidth) {\r\n            const scroll = window.scrollY;\r\n            const scrollPercentage = (scroll / (pageHeight - window.innerHeight)) * 100;\r\n            progressBar.style.width = scrollPercentage + \"%\";\r\n        } else {\r\n            pageWidth = window.innerWidth;\r\n            pageHeight = Math.max(body.scrollHeight, body.offsetHeight,\r\n                html.clientHeight, html.scrollHeight, html.offsetHeight);\r\n        }\r\n    }\r\n\r\n    currentProgress();\r\n    window.addEventListener(\"scroll\", currentProgress);\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (progressBar);\n\n//# sourceURL=webpack://frontend/./src/js/modules/progressBar.js?");
 
 /***/ })
 
