@@ -1,0 +1,11 @@
+.nav-link {
+    color: #6c757d;
+    text-decoration: none;
+}
+.nav-link:active {
+    color: #6c757d;
+}
+.nav-link:hover {
+    color: #6c757d;
+    text-decoration: none;
+}
