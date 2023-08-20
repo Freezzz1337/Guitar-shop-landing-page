@@ -4,9 +4,11 @@ function carousel() {
     const nextButton = document.querySelector(".carousel-control-next-icon");
     const prevButton = document.querySelector(".carousel-control-prev-icon");
 
-
     let currentSlide = 0;
     let maxSlides = carousels.length - 1;
+    let timerId;
+
+    timerForCarousel();
 
     prevButton.addEventListener("click", () => {
         updateSLide(currentSlide, currentSlide === 0 ? currentSlide = maxSlides : --currentSlide);
@@ -28,6 +30,8 @@ function carousel() {
 
 
     function updateSLide(currentIndex, newIndex) {
+        timerForCarousel(true);
+
         carousels[currentIndex].classList.remove("active");
         carouselIndicators[currentIndex].classList.remove("active");
 
@@ -35,6 +39,22 @@ function carousel() {
 
         carousels[currentSlide].classList.add("active");
         carouselIndicators[currentSlide].classList.add("active");
+    }
+
+    function timerForCarousel(check = false) {
+
+        function start() {
+            timerId = setInterval(function () {
+                updateSLide(currentSlide, currentSlide < maxSlides ? ++currentSlide : 0);
+            }, 3500);
+        }
+
+        if (check) {
+            clearInterval(timerId);
+            start();
+        }else {
+            start();
+        }
     }
 }
 
