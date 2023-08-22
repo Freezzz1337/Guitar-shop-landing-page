@@ -9,10 +9,9 @@ function tabs() {
     });
 
     tabs[0].style.display = "block";
-    // addEventToBtn(tabs[0], tabs[0].querySelector(""));
+    addEventToBtn(tabs[0], tabs[0].getAttribute("id"));
 
     btnTabs.forEach(item => {
-
         item.addEventListener("click", (e) => {
             e.preventDefault();
 
@@ -46,7 +45,7 @@ function tabs() {
 
     function addEventToBtn(tabSelector, btnAttribute) {
         const btns = tabSelector.querySelectorAll("button");
-
+        console.log(btnAttribute);
         btns.forEach(item => {
             item.addEventListener("click", (e) => {
                 e.preventDefault();
