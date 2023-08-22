@@ -14,7 +14,6 @@ export function modalForOrder(btnAttribute) {
     const modal = new bootstrap.Modal(modalParent);
     const modalForm =  modalParent.querySelector("#dataModelOrderForm");
 
-    // console.log(modalForm);
 
     modal.show();
 }

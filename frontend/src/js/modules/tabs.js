@@ -45,7 +45,6 @@ function tabs() {
 
     function addEventToBtn(tabSelector, btnAttribute) {
         const btns = tabSelector.querySelectorAll("button");
-        console.log(btnAttribute);
         btns.forEach(item => {
             item.addEventListener("click", (e) => {
                 e.preventDefault();
