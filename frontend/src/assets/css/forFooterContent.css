@@ -1,0 +1,15 @@
+#footerContent {
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    #footerContent {
+        text-align: center;
+    }
+}
+                                                                                                                                                                                                                                         Обратите внимание, что стили медиа-запроса следует размещать в разделе <style> внутри <head> вашей HTML-страницы или в отдельном файле стилей.
+
+
+
+
+

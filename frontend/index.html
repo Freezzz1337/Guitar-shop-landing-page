@@ -16,6 +16,7 @@
     <link href="./src/assets/css/forHeader.css" rel="stylesheet">
     <link href="./src/assets/css/forProgress.css" rel="stylesheet">
     <link href="./src/assets/css/forLink.css" rel="stylesheet">
+    <link href="./src/assets/css/forFooterContent.css" rel="stylesheet">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -46,13 +47,13 @@
                         <a href="#aboutUs" class="nav-link">About us</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#timer" class="nav-link">Promotions</a>
+                        <a href="#askQuest" class="nav-link">Ask a Question</a>
                     </li>
                     <li class="nav-item">
                         <a href="#map" class="nav-link">Contacts</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#askQuest" class="nav-link">Ask a Question</a>
+                        <a href="#timer" class="nav-link">Promotions</a>
                     </li>
                 </ul>
             </div>
@@ -65,30 +66,50 @@
 </header>
 
 
-<!--Modal-->
+<!--Modals-->
 
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modalForAnswer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header ">
-                <h5 class="modal-title" id="exampleModalLabel">We'll get in touch with you as soon as possible!</h5>
+            <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form>
-                    <div class="form-group">
-                        <label for="modalFormName" class="col-form-label">Your name:</label>
-                        <input type="text" class="form-control" id="modalFormName">
-                    </div>
-                    <div class="form-group">
-                        <label for="modalFormPhone" class="col-form-label">Your phone:</label>
-                        <input type="text" class="form-control" id="modalFormPhone">
-                    </div>
-                </form>
+                <p>Modal body text goes here.</p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalForOrder" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="orderModalLabel">Guitar Order</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="dataModelOrderForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="orderName" placeholder="Enter your name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">E-mail</label>
+                        <input type="email" class="form-control" id="orderEmail" placeholder="Enter your e-mail"
+                               required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="guitarModel" class="form-label">Guitar model</label>
+                        <input type="text" class="form-control" id="guitarModel" placeholder="Enter guitar model"
+                               required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send an order</button>
+                </form>
             </div>
         </div>
     </div>
@@ -143,7 +164,7 @@
     <div class="container mt-4" id="guitars">
         <!--Tabs menu-->
 
-        <ul class="nav nav-tabs" >
+        <ul class="nav nav-tabs">
             <li class="nav-item">
                 <a class="nav-link active" href="#popular">Popular guitar</a>
             </li>
@@ -170,7 +191,7 @@
                             the
                             card's content.</p>
                         <p class="card-text">Price: 200$</p>
-                        <a href="#" class="btn btn-outline-secondary">Order</a>
+                        <button class="btn btn-outline-secondary">Order</button>
                     </div>
                 </div>
                 <div class="col-12 col-md-3  mt-2 ">
@@ -182,7 +203,7 @@
                             the
                             card's content.</p>
                         <p class="card-text">Price: 200$</p>
-                        <a href="#" class="btn btn-outline-secondary">Order</a>
+                        <button class="btn btn-outline-secondary">Order</button>
                     </div>
                 </div>
                 <div class="col-12 col-md-3 mt-2">
@@ -194,7 +215,7 @@
                             the
                             card's content.</p>
                         <p class="card-text">Price: 200$</p>
-                        <a href="#" class="btn btn-outline-secondary">Order</a>
+                        <button class="btn btn-outline-secondary">Order</button>
                     </div>
                 </div>
                 <div class="col-12 col-md-3 mt-2">
@@ -206,7 +227,7 @@
                             the
                             card's content.</p>
                         <p class="card-text">Price: 200$</p>
-                        <a href="#" class="btn btn-outline-secondary">Order</a>
+                        <button class="btn btn-outline-secondary">Order</button>
                     </div>
                 </div>
                 <div class="border-top my-4"></div>
@@ -225,7 +246,7 @@
                             the
                             card's content.</p>
                         <p class="card-text">Price: 200$</p>
-                        <a href="#" class="btn btn-outline-secondary">Order</a>
+                        <button class="btn btn-outline-secondary">Order</button>
                     </div>
                 </div>
                 <div class="col-12 col-md-3  mt-2 ">
@@ -237,7 +258,7 @@
                             the
                             card's content.</p>
                         <p class="card-text">Price: 200$</p>
-                        <a href="#" class="btn btn-outline-secondary">Order</a>
+                        <button class="btn btn-outline-secondary">Order</button>
                     </div>
                 </div>
                 <div class="col-12 col-md-3 mt-2">
@@ -249,7 +270,7 @@
                             the
                             card's content.</p>
                         <p class="card-text">Price: 200$</p>
-                        <a href="#" class="btn btn-outline-secondary">Order</a>
+                        <button class="btn btn-outline-secondary">Order</button>
                     </div>
                 </div>
                 <div class="col-12 col-md-3 mt-2">
@@ -261,7 +282,7 @@
                             the
                             card's content.</p>
                         <p class="card-text">Price: 200$</p>
-                        <a href="#" class="btn btn-outline-secondary">Order</a>
+                        <button class="btn btn-outline-secondary">Order</button>
                     </div>
                 </div>
                 <div class="border-top my-4"></div>
@@ -279,7 +300,7 @@
                             the
                             card's content.</p>
                         <p class="card-text">Price: 200$</p>
-                        <a href="#" class="btn btn-outline-secondary">Order</a>
+                        <button class="btn btn-outline-secondary">Order</button>
                     </div>
                 </div>
                 <div class="col-12 col-md-3  mt-2">
@@ -291,7 +312,7 @@
                             the
                             card's content.</p>
                         <p class="card-text">Price: 200$</p>
-                        <a href="#" class="btn btn-outline-secondary">Order</a>
+                        <button class="btn btn-outline-secondary">Order</button>
                     </div>
                 </div>
                 <div class="col-12 col-md-3 mt-2">
@@ -303,7 +324,7 @@
                             the
                             card's content.</p>
                         <p class="card-text">Price: 200$</p>
-                        <a href="#" class="btn btn-outline-secondary">Order</a>
+                        <button class="btn btn-outline-secondary">Order</button>
                     </div>
                 </div>
                 <div class="col-12 col-md-3 mt-2">
@@ -315,7 +336,7 @@
                             the
                             card's content.</p>
                         <p class="card-text">Price: 200$</p>
-                        <a href="#" class="btn btn-outline-secondary">Order</a>
+                        <button class="btn btn-outline-secondary">Order</button>
                     </div>
                 </div>
                 <div class="border-top my-4"></div>
@@ -333,7 +354,7 @@
                             the
                             card's content.</p>
                         <p class="card-text">Price: 200$</p>
-                        <a href="#" class="btn btn-outline-secondary">Order</a>
+                        <button class="btn btn-outline-secondary">Order</button>
                     </div>
                 </div>
                 <div class="col-12 col-md-3  mt-2">
@@ -346,7 +367,7 @@
                             the
                             card's content.</p>
                         <p class="card-text">Price: 200$</p>
-                        <a href="#" class="btn btn-outline-secondary">Order</a>
+                        <button class="btn btn-outline-secondary">Order</button>
                     </div>
                 </div>
                 <div class="col-12 col-md-3 mt-2">
@@ -358,7 +379,7 @@
                             the
                             card's content.</p>
                         <p class="card-text">Price: 200$</p>
-                        <a href="#" class="btn btn-outline-secondary">Order</a>
+                        <button class="btn btn-outline-secondary">Order</button>
                     </div>
                 </div>
                 <div class="col-12 col-md-3 mt-2">
@@ -370,7 +391,7 @@
                             the
                             card's content.</p>
                         <p class="card-text">Price: 200$</p>
-                        <a href="#" class="btn btn-outline-secondary">Order</a>
+                        <button class="btn btn-outline-secondary">Order</button>
                     </div>
                 </div>
                 <div class="border-top my-4"></div>
@@ -415,7 +436,7 @@
                 <h3 class="text-center">Want to ask a question?</h3>
                 <h3 class="text-center">WRITE US!</h3>
                 <h4 class="border-bottom mt-3 text-center">Our manager will answer you as soon as possible</h4>
-                <form class="no-border  mt-4">
+                <form class="no-border mt-4" id="askQuestForm">
                     <div class="mb-3">
                         <label for="name" class="form-label h5 ">Name</label>
                         <input type="text" class=" form-control" id="name" name="name" placeholder="write your name">
@@ -508,21 +529,17 @@
 <footer>
     <div class="container">
         <div class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-            <p class="col-md-4 mb-0 text-muted">© 2023 Company, Inc</p>
+            <p class="col-md-4 mb-0 text-muted ">© 2023 Company, Inc</p>
 
             <a class="navbar-brand mt-2" href="#">
                 <img class="img-fluid" src="./src/assets/img/guitarIcon/guitarIcon.png" alt="imgIcon">
             </a>
 
-            <ul class="nav col-md-4 justify-content-end">
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Guitars</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About us</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Promotions</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Contacts</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Ask a Question</a></li>
-            </ul>
-
+            <div id="footerContent" class="col-md-4 col-12">
+                <p class="mb-1 ">Contact us: 123 Main St, City, Country</p>
+                <p class="mb-1 ">Email: info@example.com</p>
+                <p class="mb-0 ">Phone: +1 (123) 456-7890</p>
+            </div>
         </div>
     </div>
 </footer>

@@ -18,7 +18,7 @@ function timer(deadline) {
     }
 
     function addZero(num) {
-        return num > 0 && num < 10 ? `0${num}` : num;
+        return num >= 0 && num < 10 ? `0${num}` : num;
     }
 
     function setClock(timerSelector, endTime) {

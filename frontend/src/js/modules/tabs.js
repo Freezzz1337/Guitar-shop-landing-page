@@ -1,3 +1,5 @@
+import {modalForOrder} from "./modals";
+
 function tabs() {
     const tabs = document.querySelectorAll("[data-tab]");
     const btnTabs = document.querySelectorAll("#guitars .nav-link");
@@ -7,10 +9,10 @@ function tabs() {
     });
 
     tabs[0].style.display = "block";
-
-    console.log(btnTabs);
+    // addEventToBtn(tabs[0], tabs[0].querySelector(""));
 
     btnTabs.forEach(item => {
+
         item.addEventListener("click", (e) => {
             e.preventDefault();
 
@@ -21,6 +23,8 @@ function tabs() {
     })
 
     function show(item) {
+        const btnAttribute = item.getAttribute("href").slice(1);
+
         tabs.forEach(i => i.style.display = "none");
         btnTabs.forEach(i => {
             if (i.classList.contains("active")) {
@@ -28,17 +32,31 @@ function tabs() {
             }
         });
 
-
-        const btnAttribute = item.getAttribute("href").slice(1);
-
         item.classList.add("active");
 
         tabs.forEach(e => {
             if (e.id === btnAttribute) {
+
+                addEventToBtn(e, btnAttribute);
+
                 e.style.display = "block";
             }
         });
     }
+
+    function addEventToBtn(tabSelector, btnAttribute) {
+        const btns = tabSelector.querySelectorAll("button");
+
+        btns.forEach(item => {
+            item.addEventListener("click", (e) => {
+                e.preventDefault();
+
+
+                modalForOrder(btnAttribute);
+            })
+        })
+    }
+
 }
 
 export default tabs;
