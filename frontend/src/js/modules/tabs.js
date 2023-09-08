@@ -1,4 +1,4 @@
-import {modalForOrder} from "./modals";
+import {modalForOrderFunction} from "./modals";
 
 function tabs() {
     const tabs = document.querySelectorAll("[data-tab]");
@@ -36,8 +36,8 @@ function tabs() {
         tabs.forEach(e => {
             if (e.id === btnAttribute) {
 
-                addEventToBtn(e, btnAttribute);
 
+                addEventToBtn(e, btnAttribute);
                 e.style.display = "block";
             }
         });
@@ -48,9 +48,7 @@ function tabs() {
         btns.forEach(item => {
             item.addEventListener("click", (e) => {
                 e.preventDefault();
-
-
-                modalForOrder(btnAttribute);
+                modalForOrderFunction(btnAttribute);
             })
         })
     }

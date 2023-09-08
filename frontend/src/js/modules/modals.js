@@ -1,21 +1,25 @@
 import bootstrap from "bootstrap/dist/js/bootstrap.bundle";
 
-export function modalForQuest(message) {
-    const modalParent = document.querySelector("#modalForAnswer");
-    const modal = new bootstrap.Modal(modalParent);
-    const modalText = modalParent.querySelector(".modal-body p");
+const modalParentForQuest = document.querySelector("#modalForAnswer");
+const modalForQuest = new bootstrap.Modal(modalParentForQuest);
+export function modalForQuestFunction(message) {
+
+    const modalText = modalParentForQuest.querySelector(".modalForQuest-body p");
 
     modalText.innerHTML = message;
-    modal.show();
+    modalForQuest.show();
 }
 
-export function modalForOrder(btnAttribute) {
-    const modalParent = document.querySelector("#modalForOrder");
-    const modal = new bootstrap.Modal(modalParent);
-    const modalForm =  modalParent.querySelector("#dataModelOrderForm");
+const modalParentForOrder = document.querySelector("#modalForOrder");
+const modalForOrder = new bootstrap.Modal(modalParentForOrder);
 
+export function modalForOrderFunction(btnAttribute) {
 
-    modal.show();
+    const modalForm = modalParentForOrder.querySelector("#dataModelOrderForm");
+
+    modalForOrder.show();
+
 }
 
-export default {modalForQuest, modalForOrder};
+
+export default {modalForQuest: modalForQuestFunction, modalForOrder: modalForOrderFunction};

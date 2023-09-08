@@ -1,4 +1,4 @@
-import {modalForQuest} from "./modals";
+import {modalForQuestFunction} from "./modals";
 
 function forms() {
     function formAskQuestion() {
@@ -9,7 +9,7 @@ function forms() {
 
             const formData = new FormData(askQuestionForm);
             if (Object.fromEntries(formData)) {
-                modalForQuest("Test text");
+                modalForQuestFunction("Test text");
             }
         });
 
