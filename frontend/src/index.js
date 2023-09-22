@@ -16,5 +16,4 @@ window.addEventListener("DOMContentLoaded", () => {
     timer(deadline);
     forms();
     progressBar();
-
 });

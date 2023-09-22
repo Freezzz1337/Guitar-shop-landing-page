@@ -22,12 +22,12 @@
 </head>
 <body id="home">
 
-<header class="fixed-top  ">
+<header class="fixed-top">
 
     <nav class="navbar navbar-expand-md navbar-light bg-light ">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img class="img-fluid" src="./src/assets/img/guitarIcon/guitarIcon.png" alt="img">
+                <img class="img-fluid" src="./src/assets/img/guitarIcon/guitarIcon.png" alt="img"/>
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
@@ -65,10 +65,16 @@
     </div>
 </header>
 
+<!--To add a new picture-->
+<!--<form method="post" data-add>-->
+<!--<label>Photo</label>-->
+<!--<input type="file" name="picture"/>-->
+<!--<button type="submit">Add photo</button>-->
+<!--</form>-->
 
 <!--Modals-->
 
-<div class="modal fade" id="modalForAnswer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modalForAnswer" tabindex="-1" aria-labelledby="answerModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -93,7 +99,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form id="dataModelOrderForm">
+                <form id="dataModalOrderForm">
                     <div class="mb-3">
                         <label for="name" class="form-label">Name</label>
                         <input type="text" class="form-control" id="orderName" placeholder="Enter your name" required>
@@ -108,7 +114,14 @@
                         <input type="text" class="form-control" id="guitarModel" placeholder="Enter guitar model"
                                required>
                     </div>
-                    <button type="submit" class="btn btn-primary">Send an order</button>
+                    <div class="mb-3">
+                        <label for="guitarPrice" class="form-label">Guitar price</label>
+                        <input type="text" class="form-control" id="guitarPrice"
+                               readonly>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-outline-secondary">Send an order</button>
+                    </div>
                 </form>
             </div>
         </div>
@@ -179,227 +192,10 @@
             </li>
         </ul>
 
-        <div id="popular" data-tab>
-            <div class="row text-center my-3 ">
-                <div class="col-12 col-md-3 mt-2">
 
-                    <img src="https://assets.yousician.com/app/uploads/2022/05/05130122/yousician-educational-photography-21-1024x683.jpg.webp"
-                         class="card-img-top" alt="guitar"/>
-                    <div class="card-body ">
-                        <h5 class="card-title ">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                        <p class="card-text">Price: 200$</p>
-                        <button class="btn btn-outline-secondary">Order</button>
-                    </div>
-                </div>
-                <div class="col-12 col-md-3  mt-2 ">
-                    <img src="https://images.unsplash.com/photo-1605020420620-20c943cc4669?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGd1aXRhcnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80"
-                         class="card-img-top" alt="guitar"/>
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                        <p class="card-text">Price: 200$</p>
-                        <button class="btn btn-outline-secondary">Order</button>
-                    </div>
-                </div>
-                <div class="col-12 col-md-3 mt-2">
-                    <img src="https://images.unsplash.com/photo-1605020420620-20c943cc4669?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGd1aXRhcnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80 "
-                         class="card-img-top" alt="guitar"/>
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                        <p class="card-text">Price: 200$</p>
-                        <button class="btn btn-outline-secondary">Order</button>
-                    </div>
-                </div>
-                <div class="col-12 col-md-3 mt-2">
-                    <img src="https://images.unsplash.com/photo-1605020420620-20c943cc4669?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGd1aXRhcnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80 "
-                         class="card-img-top" alt="guitar"/>
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                        <p class="card-text">Price: 200$</p>
-                        <button class="btn btn-outline-secondary">Order</button>
-                    </div>
-                </div>
-                <div class="border-top my-4"></div>
-            </div>
-        </div>
-
-        <div id="acoustic" data-tab>
-
-            <div class="row text-center my-3 ">
-                <div class="col-12 col-md-3 mt-2">
-                    <img src="https://images.unsplash.com/photo-1605020420620-20c943cc4669?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGd1aXRhcnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80"
-                         class="card-img-top" alt="guitar"/>
-                    <div class="card-body ">
-                        <h5 class="card-title ">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                        <p class="card-text">Price: 200$</p>
-                        <button class="btn btn-outline-secondary">Order</button>
-                    </div>
-                </div>
-                <div class="col-12 col-md-3  mt-2 ">
-                    <img src="https://assets.yousician.com/app/uploads/2022/05/05130122/yousician-educational-photography-21-1024x683.jpg.webp"
-                         class="card-img-top" alt="guitar"/>
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                        <p class="card-text">Price: 200$</p>
-                        <button class="btn btn-outline-secondary">Order</button>
-                    </div>
-                </div>
-                <div class="col-12 col-md-3 mt-2">
-                    <img src="https://images.unsplash.com/photo-1605020420620-20c943cc4669?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGd1aXRhcnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80 "
-                         class="card-img-top" alt="guitar"/>
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                        <p class="card-text">Price: 200$</p>
-                        <button class="btn btn-outline-secondary">Order</button>
-                    </div>
-                </div>
-                <div class="col-12 col-md-3 mt-2">
-                    <img src="https://images.unsplash.com/photo-1605020420620-20c943cc4669?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGd1aXRhcnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80 "
-                         class="card-img-top" alt="guitar"/>
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                        <p class="card-text">Price: 200$</p>
-                        <button class="btn btn-outline-secondary">Order</button>
-                    </div>
-                </div>
-                <div class="border-top my-4"></div>
-            </div>
-        </div>
-
-        <div id="electric" data-tab>
-            <div class="row text-center my-3 ">
-                <div class="col-12 col-md-3 mt-2">
-                    <img src="https://images.unsplash.com/photo-1605020420620-20c943cc4669?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGd1aXRhcnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80"
-                         class="card-img-top" alt="guitar"/>
-                    <div class="card-body ">
-                        <h5 class="card-title ">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                        <p class="card-text">Price: 200$</p>
-                        <button class="btn btn-outline-secondary">Order</button>
-                    </div>
-                </div>
-                <div class="col-12 col-md-3  mt-2">
-                    <img src="https://images.unsplash.com/photo-1605020420620-20c943cc4669?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGd1aXRhcnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80 "
-                         class="card-img-top" alt="guitar"/>
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                        <p class="card-text">Price: 200$</p>
-                        <button class="btn btn-outline-secondary">Order</button>
-                    </div>
-                </div>
-                <div class="col-12 col-md-3 mt-2">
-                    <img src="https://assets.yousician.com/app/uploads/2022/05/05130122/yousician-educational-photography-21-1024x683.jpg.webp"
-                         class="card-img-top" alt="guitar"/>
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                        <p class="card-text">Price: 200$</p>
-                        <button class="btn btn-outline-secondary">Order</button>
-                    </div>
-                </div>
-                <div class="col-12 col-md-3 mt-2">
-                    <img src="https://images.unsplash.com/photo-1605020420620-20c943cc4669?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGd1aXRhcnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80 "
-                         class="card-img-top" alt="guitar"/>
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                        <p class="card-text">Price: 200$</p>
-                        <button class="btn btn-outline-secondary">Order</button>
-                    </div>
-                </div>
-                <div class="border-top my-4"></div>
-            </div>
-        </div>
-
-        <div id="bas" data-tab>
-            <div class="row text-center my-3">
-                <div class="col-12 col-md-3 mt-2">
-                    <img src="https://images.unsplash.com/photo-1605020420620-20c943cc4669?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGd1aXRhcnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80"
-                         class="card-img-top" alt="guitar"/>
-                    <div class="card-body ">
-                        <h5 class="card-title ">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                        <p class="card-text">Price: 200$</p>
-                        <button class="btn btn-outline-secondary">Order</button>
-                    </div>
-                </div>
-                <div class="col-12 col-md-3  mt-2">
-
-                    <img src="https://images.unsplash.com/photo-1605020420620-20c943cc4669?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGd1aXRhcnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80 "
-                         class="card-img-top" alt="guitar"/>
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                        <p class="card-text">Price: 200$</p>
-                        <button class="btn btn-outline-secondary">Order</button>
-                    </div>
-                </div>
-                <div class="col-12 col-md-3 mt-2">
-                    <img src="https://images.unsplash.com/photo-1605020420620-20c943cc4669?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGd1aXRhcnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80 "
-                         class="card-img-top" alt="guitar"/>
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                        <p class="card-text">Price: 200$</p>
-                        <button class="btn btn-outline-secondary">Order</button>
-                    </div>
-                </div>
-                <div class="col-12 col-md-3 mt-2">
-                    <img src="https://assets.yousician.com/app/uploads/2022/05/05130122/yousician-educational-photography-21-1024x683.jpg.webp"
-                         class="card-img-top" alt="guitar"/>
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                        <p class="card-text">Price: 200$</p>
-                        <button class="btn btn-outline-secondary">Order</button>
-                    </div>
-                </div>
-                <div class="border-top my-4"></div>
-            </div>
-        </div>
     </div>
 
-    <!--    About us-->
+    <!--About us-->
 
     <div class="container " id="aboutUs">
         <div class="row">
@@ -451,9 +247,7 @@
             </div>
         </div>
         <div class="border-top mt-4"></div>
-
     </div>
-
 
     <!--Map-->
     <div class="container" id="map">
@@ -473,14 +267,12 @@
             </div>
         </div>
         <div class="border-top mt-4"></div>
-
     </div>
 
-    <!--    Timer-->
+    <!--Timer-->
     <div class="container mt-4" id="timer">
-
         <div class="row bgc_guitar">
-            <!--            gc_guitar rounded-->
+            <!--gc_guitar rounded-->
             <div class="col-12 col-md-5 col-xl-7 mt-3  ">
                 <div class="h2">Promotion for new customers!</div>
                 <div class="promotion__descr">
@@ -522,8 +314,6 @@
             </div>
         </div>
     </div>
-
-
 </main>
 
 <footer>

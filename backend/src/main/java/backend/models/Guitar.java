@@ -1,5 +1,6 @@
 package backend.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -31,7 +32,10 @@ public class Guitar {
     @Column(name = "description", length = 255)
     private String description;
 
-    @Lob
     @Column(name = "picture")
+    @JsonIgnore
     private byte[] picture;
+
+    @Transient
+    private String imgUrl;
 }

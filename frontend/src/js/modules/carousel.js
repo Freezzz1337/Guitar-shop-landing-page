@@ -1,3 +1,4 @@
+"use strict";
 function carousel() {
     const carousels = document.querySelectorAll(".carousel-item");
     const carouselIndicators = document.querySelectorAll("[data-bs-target='#carouselExampleCaptions']");

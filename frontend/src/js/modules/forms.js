@@ -1,3 +1,4 @@
+"use strict";
 import {modalForQuestFunction} from "./modals";
 
 function forms() {

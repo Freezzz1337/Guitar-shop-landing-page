@@ -1,3 +1,4 @@
+"use strict";
 function header() {
     const menuBtn = document.querySelector(".navbar-toggler");
     const navbarContent = document.querySelector("#navbarContent");

@@ -1,3 +1,4 @@
+"use strict";
 function progressBar() {
     const progressBar = document.querySelector(".progress-bar");
     const body = document.body;

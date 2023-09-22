@@ -1,3 +1,4 @@
+"use strict";
 function timer(deadline) {
     const timer = document.querySelector("#timer");
 
