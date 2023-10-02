@@ -1,4 +1,5 @@
 "use strict";
+
 export function getPopularGuitars() {
     return fetch("http://localhost:8080/guitar/popular")
         .then(response => response.json());
@@ -19,8 +20,26 @@ export function getBasGuitars() {
         .then(response => response.json());
 }
 
+export function postOrder(formData){
+    const requestOptions = {
+        method:"POST",
+        body:formData
+    };
 
-export default {getPopularGuitars, getAcousticGuitars, getElectricGuitars, getBasGuitars};
+    fetch("http://localhost:8080/order", requestOptions)
+        .then(response => console.log(response.text()));
+}
+
+export function postAskQuestion(formData){
+    const requestOptions = {
+        method:"POST",
+        body:formData
+    };
+
+    fetch("http://localhost:8080/writeUs",requestOptions)
+        .then(response => console.log(response.text()));
+}
+
 
 // function forToAddPicture() {
 //     let form = document.querySelector('[data-add]');

@@ -91,42 +91,42 @@
     </div>
 </div>
 
-<div class="modal fade" id="modalForOrder" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="orderModalLabel">Guitar Order</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form id="dataModalOrderForm">
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="orderName" placeholder="Enter your name" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">E-mail</label>
-                        <input type="email" class="form-control" id="orderEmail" placeholder="Enter your e-mail"
-                               required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="guitarModel" class="form-label">Guitar model</label>
-                        <input type="text" class="form-control" id="guitarModel" placeholder="Enter guitar model"
-                               required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="guitarPrice" class="form-label">Guitar price</label>
-                        <input type="text" class="form-control" id="guitarPrice"
-                               readonly>
-                    </div>
-                    <div class="text-center">
-                        <button type="submit" class="btn btn-outline-secondary">Send an order</button>
-                    </div>
-                </form>
+    <div class="modal fade" id="modalForOrder" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="orderModalLabel">Guitar Order</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="dataModalOrderForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input name="name" type="text" class="form-control" id="orderName" placeholder="Enter your name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-mail</label>
+                            <input name="email" type="email" class="form-control" id="orderEmail" placeholder="Enter your e-mail"
+                                   required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="guitarModel" class="form-label">Guitar model</label>
+                            <input name="guitarModel" type="text" class="form-control" id="guitarModel" placeholder="Enter guitar model"
+                                   required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="guitarPrice" class="form-label">Guitar price $</label>
+                            <input name="guitarPrice" type="number" class="form-control" id="guitarPrice"
+                                   readonly>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-outline-secondary" >Send an order</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 <main>
 
@@ -235,7 +235,7 @@
                 <form class="no-border mt-4" id="askQuestForm">
                     <div class="mb-3">
                         <label for="name" class="form-label h5 ">Name</label>
-                        <input type="text" class=" form-control" id="name" name="name" placeholder="write your name">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="write your name">
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label h5">E-mail</label>

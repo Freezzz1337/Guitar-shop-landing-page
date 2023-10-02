@@ -1,6 +1,6 @@
 "use strict";
 
-import {modalForOrderFunction} from "./modals";
+import {showModalForOrderFunction} from "./modals";
 import {getAcousticGuitars, getBasGuitars, getElectricGuitars, getPopularGuitars} from "./serverRequests";
 
 function tabs() {
@@ -83,13 +83,11 @@ function tabs() {
 
     function addEventToBtn(tabSelector) {
         const btns = tabSelector.querySelectorAll("button");
-        // tabSelector.querySelectorAll(".col-12").forEach(a => console.log(a));
-        // console.log(tabSelector.querySelector("[data-guitar-name]").textContent);
 
         btns.forEach(item => {
             item.addEventListener("click", (e) => {
                 e.preventDefault();
-                modalForOrderFunction(item.closest(".col-12").querySelector("[data-guitar-name]").textContent,
+                showModalForOrderFunction(item.closest(".col-12").querySelector("[data-guitar-name]").textContent,
                     item.closest(".col-12").querySelector("[data-guitar-price]").textContent,
                     tabSelector);
             })

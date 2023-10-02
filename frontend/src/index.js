@@ -8,7 +8,7 @@ import forms from "./js/modules/forms";
 window.addEventListener("DOMContentLoaded", () => {
     "use strict";
 
-    const deadline = "2023-09-18";
+    const deadline = "2023-10-18";
 
     header();
     carousel();

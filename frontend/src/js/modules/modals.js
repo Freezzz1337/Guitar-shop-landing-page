@@ -5,7 +5,7 @@ import bootstrap from "bootstrap/dist/js/bootstrap.bundle";
 const modalParentForQuest = document.querySelector("#modalForAnswer");
 const modalForQuest = new bootstrap.Modal(modalParentForQuest);
 
-export function modalForQuestFunction(message) {
+export function ModalForQuestFunction(message) {
     const modalText = modalParentForQuest.querySelector(".modalForQuest-body p");
     console.log(message)
     // modalText.innerHTML = message;
@@ -15,16 +15,17 @@ export function modalForQuestFunction(message) {
 const modalParentForOrder = document.querySelector("#modalForOrder");
 const modalForOrder = new bootstrap.Modal(modalParentForOrder);
 
-export function modalForOrderFunction(guitarName, guitarPrice, test) {
+export function showModalForOrderFunction(guitarName, guitarPrice, test) {
     const modalForm = modalParentForOrder.querySelector("#dataModalOrderForm");
     const inputGuitarNameForm = modalForm.querySelector("#guitarModel");
     const inputGuitarPriceForm = modalForm.querySelector("#guitarPrice");
 
     inputGuitarNameForm.value = guitarName;
-    inputGuitarPriceForm.value = guitarPrice;
+    inputGuitarPriceForm.value = guitarPrice.slice(7,-1);
 
     modalForOrder.show();
 }
 
 
-export default {modalForQuest: modalForQuestFunction, modalForOrder: modalForOrderFunction};
+
+export default {modalForQuest: ModalForQuestFunction, modalForOrder: showModalForOrderFunction};
